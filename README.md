@@ -1,5 +1,5 @@
 ## CloverClear
-**Minecraft-1.12.2-forge** | **Server-Side-Only**
+**Minecraft-1.12.2-forge** | **Server-Side-Only**   
 A forge mod for clearing dropped items.   
 Use whitelist to filter ItemID、 ModID and Dimensions.   
 
