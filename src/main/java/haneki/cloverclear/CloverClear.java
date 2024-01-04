@@ -1,6 +1,9 @@
 package haneki.cloverclear;
 
+import haneki.cloverclear.handler.ClearEventHandler;
+import haneki.cloverclear.handler.ConfigHandler;
 import net.minecraft.server.MinecraftServer;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -19,6 +22,9 @@ public class CloverClear
     public static Logger logger;
 
     public static MinecraftServer SERVER = null;
+    public CloverClear(){
+        registerServerEventHandler();
+    }
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -36,5 +42,11 @@ public class CloverClear
     private void onServerAboutToStart(FMLServerAboutToStartEvent event) {
         SERVER = event.getServer();
         logger.info("Loaded clover clear.");
+    }
+
+    private void registerServerEventHandler() {
+        ConfigHandler.load();
+        ClearEventHandler eventHandler = new ClearEventHandler();
+        MinecraftForge.EVENT_BUS.register(eventHandler);
     }
 }

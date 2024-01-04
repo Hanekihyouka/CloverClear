@@ -15,10 +15,14 @@ public class ConfigHandler {
     public static Setting setting = new Setting();
     public static Whitelist whitelist = new Whitelist();
 
+    public static void load(){
+        ConfigManager.load(CloverClear.MODID, Config.Type.INSTANCE);
+    }
+
     @SubscribeEvent
     public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
         if (event.getModID().equals(CloverClear.MODID)) {
-            ConfigManager.load(CloverClear.MODID, Config.Type.INSTANCE);
+            load();
         }
     }
 }
