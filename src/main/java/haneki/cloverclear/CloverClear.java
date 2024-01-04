@@ -1,13 +1,12 @@
 package haneki.cloverclear;
 
-import haneki.cloverclear.command.CommandClover;
+import haneki.cloverclear.command.CmdClover;
 import haneki.cloverclear.handler.ClearEventHandler;
 import haneki.cloverclear.handler.ConfigHandler;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
@@ -36,7 +35,7 @@ public class CloverClear
 
     @EventHandler
     public void onServerStarting(FMLServerStartingEvent event) {
-        event.registerServerCommand(new CommandClover());
+        event.registerServerCommand(new CmdClover());
     }
 
     @EventHandler

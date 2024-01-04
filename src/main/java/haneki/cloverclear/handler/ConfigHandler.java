@@ -17,5 +17,7 @@ public class ConfigHandler {
     public static void load(){
         ConfigManager.load(CloverClear.MODID, Config.Type.INSTANCE);
     }
-
+    public static void sync(){
+        ConfigManager.sync(CloverClear.MODID, Config.Type.INSTANCE);
+    }
 }
