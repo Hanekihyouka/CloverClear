@@ -18,11 +18,5 @@ public class ConfigHandler {
     public static void load(){
         ConfigManager.load(CloverClear.MODID, Config.Type.INSTANCE);
     }
-
-    @SubscribeEvent
-    public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
-        if (event.getModID().equals(CloverClear.MODID)) {
-            load();
-        }
-    }
+    
 }
