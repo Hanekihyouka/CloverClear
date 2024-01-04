@@ -33,7 +33,7 @@ public class ClearEventHandler {
                     }
                     //TODO message ues resources and add lang files.
                     CloverClear.SERVER.getPlayerList().sendMessage(new TextComponentString(TextFormatting.YELLOW + "[CloverClear]" + TextFormatting.GRAY + clearMessage + TextFormatting.RESET + "\n" +
-                             "Cleared " + TextFormatting.RED + total_amount + TextFormatting.RESET + " item-entities. The next one will be in " + ConfigHandler.setting.time + " seconds."));
+                             "Cleared " + TextFormatting.RED + total_amount + TextFormatting.RESET + " item-entities. The next one will be in " + ConfigHandler.setting.time + " seconds.\n Use /clover trashcan to view latest trashcan."));
                     timer = ConfigHandler.setting.time * 20;
                 }
                 if (timer == warningTime){
