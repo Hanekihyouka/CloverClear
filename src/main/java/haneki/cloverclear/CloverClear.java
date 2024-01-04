@@ -1,5 +1,6 @@
 package haneki.cloverclear;
 
+import haneki.cloverclear.command.CommandClover;
 import haneki.cloverclear.handler.ClearEventHandler;
 import haneki.cloverclear.handler.ConfigHandler;
 import net.minecraft.server.MinecraftServer;
@@ -9,6 +10,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = CloverClear.MODID, name = CloverClear.NAME, version = CloverClear.VERSION,
@@ -33,9 +35,8 @@ public class CloverClear
     }
 
     @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-        // some example code
+    public void onServerStarting(FMLServerStartingEvent event) {
+        event.registerServerCommand(new CommandClover());
     }
 
     @EventHandler
