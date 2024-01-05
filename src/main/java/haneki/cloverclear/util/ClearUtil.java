@@ -22,7 +22,7 @@ public class ClearUtil {
         itemWhitelist = Arrays.asList(whitelist.itemWhitelist);
         modWhitelist = Arrays.asList(whitelist.modWhitelist);
         dimWhitelist = Arrays.asList(whitelist.dimWhitelist);
-        trashcan = new InventoryBasic("Clover Trash Can",true,72);
+        trashcan = new InventoryBasic("Clover Trash Can",true,54);
     }
 
     public HashMap<WorldServer,Integer> doServerClear(MinecraftServer server){
