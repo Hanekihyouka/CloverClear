@@ -26,10 +26,12 @@ public class ClearEventHandler {
                     int total_amount = 0;
                     HashMap<WorldServer,Integer> counterMap = clearUtil.doServerClear(CloverClear.SERVER);
                     for (Map.Entry<WorldServer, Integer> dimCounter : counterMap.entrySet()) {
-                        Integer dim_id = dimCounter.getKey().provider.getDimension();
-                        String dim_name = dimCounter.getKey().provider.getDimensionType().name();
-                        total_amount += dimCounter.getValue();
-                        clearMessage.append("\n[ ").append(dim_id).append(" ] "  ).append(dim_name).append(":  ").append(dimCounter.getValue());
+                        if (dimCounter.getValue() > 0) {
+                            Integer dim_id = dimCounter.getKey().provider.getDimension();
+                            String dim_name = dimCounter.getKey().provider.getDimensionType().name();
+                            total_amount += dimCounter.getValue();
+                            clearMessage.append("\n[ ").append(dim_id).append(" ] ").append(dim_name).append(":  ").append(dimCounter.getValue());
+                        }
                     }
                     //TODO message ues resources and add lang files.
                     CloverClear.SERVER.getPlayerList().sendMessage(new TextComponentString(TextFormatting.YELLOW + "[CloverClear]" + TextFormatting.GRAY + clearMessage + TextFormatting.RESET + "\n" +
