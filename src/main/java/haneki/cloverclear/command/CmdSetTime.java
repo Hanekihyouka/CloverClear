@@ -19,8 +19,7 @@ public class CmdSetTime extends CmdBase {
             sender.sendMessage(new TextComponentString("/clover settime [seconds]"));
         }else {
             if (args[0].matches("^[1-9]\\d*$")){
-                ConfigHandler.setting.time = Integer.parseInt(args[0]);
-                ConfigHandler.sync();
+                ConfigHandler.setTime(Integer.parseInt(args[0]));
                 sender.sendMessage(new TextComponentString("Cycle has been set to " + args[0] + " seconds."));
             }else {
                 sender.sendMessage(new TextComponentString("NaN"));

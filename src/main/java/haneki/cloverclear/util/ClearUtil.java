@@ -7,10 +7,7 @@ import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.WorldServer;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class ClearUtil {
     public static List<String> itemWhitelist;
@@ -19,9 +16,9 @@ public class ClearUtil {
 
     public static InventoryBasic trashcan;
     public ClearUtil(Whitelist whitelist){
-        itemWhitelist = Arrays.asList(whitelist.itemWhitelist);
-        modWhitelist = Arrays.asList(whitelist.modWhitelist);
-        dimWhitelist = Arrays.asList(whitelist.dimWhitelist);
+        itemWhitelist = new ArrayList<>(Arrays.asList(whitelist.itemWhitelist));
+        modWhitelist = new ArrayList<>(Arrays.asList(whitelist.modWhitelist));
+        dimWhitelist = new ArrayList<>(Arrays.asList(whitelist.dimWhitelist));
         trashcan = new InventoryBasic("Clover Trash Can",true,54);
     }
 
