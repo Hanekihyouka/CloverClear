@@ -1,5 +1,5 @@
 ## CloverClear
-**Minecraft 1.12.2 forge mod**
+**Minecraft 1.12.2 forge mod**   
 **Server-Side-Only**   
 
 
@@ -21,7 +21,8 @@ Command:
 - `/clover settime [seconds]`
 - `/clover setwarningtime [seconds]`
 - `/clover trashcan` open a trashcan to view latest cleared items.
-
+- `/clover whitelist [more parameters]` edit whitelist in game.
+- `/clover info` show info.
 
 ----   
 
