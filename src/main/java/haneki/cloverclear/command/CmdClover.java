@@ -12,5 +12,6 @@ public class CmdClover extends CmdTreeBase {
         addSubcommand(new CmdSetWarningTime());
         addSubcommand(new CmdTrashCan());
         addSubcommand(new CmdWhiteList());
+        addSubcommand(new CmdInfo());
     }
 }
