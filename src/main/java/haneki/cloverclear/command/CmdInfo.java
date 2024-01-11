@@ -31,7 +31,7 @@ public class CmdInfo extends CmdBase {
             content.append(mod).append(" , ");
         }
 
-        content.append("\n[Whitelist-item] : ");
+        content.append("\n[Whitelist-dimension] : ");
         for (int dim:ClearUtil.dimWhitelist){
             content.append(dim).append(" , ");
         }
