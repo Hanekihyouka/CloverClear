@@ -26,11 +26,13 @@ public class ConfigHandler {
     }
 
     public static void setTime(int t){
+        ClearEventHandler.timer = t*20;
         setting.time = t;
         sync();
     }
 
     public static void setWaringTime(int t){
+        ClearEventHandler.warningTime = t;
         setting.warningTime = t;
         sync();
     }
