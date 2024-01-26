@@ -11,7 +11,7 @@ import net.minecraft.util.text.TextComponentString;
 public class CmdInfo extends CmdBase {
 
     public CmdInfo() {
-        super("info",Level.OP);
+        super("info",Level.ALL);
     }
 
     @Override
