@@ -1,6 +1,7 @@
 package haneki.cloverclear.command;
 
 import com.feed_the_beast.ftblib.lib.command.CmdBase;
+import haneki.cloverclear.handler.ClearEventHandler;
 import haneki.cloverclear.handler.ConfigHandler;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -20,6 +21,7 @@ public class CmdSetTime extends CmdBase {
         }else {
             if (args[0].matches("^[1-9]\\d*$")){
                 ConfigHandler.setTime(Integer.parseInt(args[0]));
+                ClearEventHandler.resetTimer();
                 sender.sendMessage(new TextComponentString("Cycle has been set to " + args[0] + " seconds."));
             }else {
                 sender.sendMessage(new TextComponentString("NaN"));

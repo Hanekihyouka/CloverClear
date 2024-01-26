@@ -47,4 +47,8 @@ public class ClearEventHandler {
             }
         }
     }
+
+    public static void resetTimer(){
+        timer = ConfigHandler.setting.time * 20;
+    }
 }
